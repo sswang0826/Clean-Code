@@ -28,8 +28,9 @@ clean code目的及目標
 所以就會需要有模組化，將每個部份的相依性降到最低<br>
 讓每個模組的輸入輸出可以替換成假的測試替身<br>
 以全面測試單個模組有無問題<br>
-藉由以上確保能對所有程式完成測項後<br>
-就能確保之後為了整潔而做的程式改動不會影響到結果<br>
+<br>
+藉由以上確保所有程式都能完成測項後<br>
+就能確認之後為了整潔而做的程式改動不會影響到結果<br>
 更細節內容可以參考這裡<br>
 <br>
 
@@ -37,9 +38,9 @@ clean code目的及目標
 -------------
 重複的程式通常會代表額外的工作及風險<br>
 可以想像一下<br>
-```
+```C++
 class bank{
-  voud CheckJuniorEmployee(employee junior_staff){
+  void CheckJuniorEmployee(employee junior_staff){
     //  do something...
     if(junior_staff.IsPay){
       junior_staff.CalculatePay();
@@ -47,7 +48,7 @@ class bank{
     }
   }
 
-  voud CheckSeniorEmployee(employee senior_staff){
+  void CheckSeniorEmployee(employee senior_staff){
     //  do something else...
     if(senior_staff.IsPay){
       senior_staff.CalculatePay();
@@ -64,13 +65,16 @@ class bank{
              如此一來他在需要被修改時穎該也只有一個理由
 ```
 另外以上例子除了將
-```
+```C++
 if(senior_staff.IsPay){
   senior_staff.CalculatePay();
   senior_staff.DiliverPay();
 }
 ```
-這段重複的的提取出來之外，也能利用class的方式避免
+這段重複的的藏到employee的class裡面之外<br>
+或許也能考慮建一個employee class<br>
+然後建額外的SeniorEmployee及JuniorEmployee的class來繼承employee<br>
+更細節內容可以參考這裡<br>
 <br>
 
 具表達力
