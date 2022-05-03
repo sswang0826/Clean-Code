@@ -31,6 +31,7 @@ clean code目的及目標
 <br>
 藉由以上確保所有程式都能完成測項後<br>
 就能確認之後為了整潔而做的程式改動不會影響到結果<br>
+<br>
 更細節內容可以參考這裡<br>
 <br>
 
@@ -74,17 +75,31 @@ if(senior_staff.IsPay){
 這段重複的的藏到employee的class裡面之外<br>
 或許也能考慮建一個employee class<br>
 然後建額外的SeniorEmployee及JuniorEmployee的class來繼承employee<br>
+<br>
 更細節內容可以參考這裡<br>
 <br>
 
 具表達力
 -------------
+一段code不是只有給編譯器看，也是給人看得<br>
+要注意! 這個人不一定是別人，很可能是一兩年後的自己<br>
+所以適當的增強表達或是避免理解錯誤是很重要的一件事情<br>
+另一方面，unit test也可以當作是另一種表達<br>
+他可以視作你用來理解這段code的sample code<br>
+有非常多方法可以來增加表達力<br>
 <br>
+更細節內容可以參考這裡<br>
 <br>
 
 最小化class與function的數量
 -------------
-<br>
+在完成以上對clean code的拆解後<br>
+你會發現過於遵守教條，反而會出現類似<br>
+對每一個class都建立一個interface這種沒意義的東西<br>
+所以其實不需要太多無意義的堅持<br>
+並做一些更務實的做法<br>
+不過相較於其他三點，這是優先度最低的項目<br>
+所以列在最後一點<br>
 <br>
 
 
