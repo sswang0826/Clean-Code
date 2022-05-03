@@ -6,7 +6,6 @@
 <br>
 適當的命名變數或函式，能讓閱讀更方便<br>
 以下列出幾件需要注意的事情<br>
-<br>
 * 避免誤導<br>
 例如 AccountList的型態不是list這種會讓人誤導的名詞<br>
 或是 ControllerForEfficientHandlingOfStrings與ControllerForEfficientStorageOfStrings這種名字之間只有小小的差別<br>
