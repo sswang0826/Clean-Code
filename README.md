@@ -32,7 +32,7 @@ clean code目的及目標
 藉由以上確保所有程式都能完成測項後<br>
 就能確認之後為了整潔而做的程式改動不會影響到結果<br>
 <br>
-更細節內容可以參考這裡<br>
+更細節內容可以參考[這裡](1. 能執行完所有測試/README.md)<br>
 <br>
 
 沒有重複的部分
@@ -76,7 +76,7 @@ if(senior_staff.IsPay){
 或許也能考慮建一個employee class<br>
 然後建額外的SeniorEmployee及JuniorEmployee的class來繼承employee<br>
 <br>
-更細節內容可以參考這裡<br>
+更細節內容可以參考[這裡](2. 沒有重複的部分/README.md)<br>
 <br>
 
 具表達力
@@ -88,7 +88,7 @@ if(senior_staff.IsPay){
 他可以視作你用來理解這段code的sample code<br>
 有非常多方法可以來增加表達力<br>
 <br>
-更細節內容可以參考這裡<br>
+更細節內容可以參考[這裡](3. 具表達力/README.md)<br>
 <br>
 
 最小化class與function的數量
