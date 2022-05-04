@@ -1,5 +1,5 @@
 # Clean Code筆記
-
+<br>
 以下為在閱讀無瑕的程式碼(Clean Code, Robert C. Martin)後<br>
 自己整理的筆記，方便日後快速複習
 <br>
