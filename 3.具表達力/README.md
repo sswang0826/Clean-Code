@@ -106,6 +106,27 @@ log.printTime(now_time)
 * 強調型註解<br>
 與上兩項類似，某個不起眼的功能<br>
 你可以加入註解強調他的重要性或失去它的後果<br>
+<br>
+
+縮排
+=====
+好的縮排可以方便閱讀，以下為書中建議的幾點<br>
+個人認為這部分，可以看一看就好，沒有每個需要到嚴格遵守<br>
+* 一個file最好200~500行
+* 每個row大約80~100字
+* 不用要求水平對齊
+水平對齊指的是
+```
+{
+    this.context =            context;
+    socket =                  s;
+    input =                   s.getInputStream();
+    requestParsingTimeLimit = 300;
+}
+```
+* 用垂直空白 區分不同種類的function
+意思就是在不同種類的function之間多換幾行
+* class中，function放在一起，veriable放在一起
 
 
 +++++++++++++<br>
