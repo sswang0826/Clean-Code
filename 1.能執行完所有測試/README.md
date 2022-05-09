@@ -34,7 +34,7 @@ if(delete(page) == E_OK){
   log("delete fail");
 }
 ```
-可以利用例外處理來避免這件事情
+可以利用例外處理來避免這件事情<br>
 ```C++
 void delete(Page page){
   try{
@@ -51,6 +51,44 @@ void deletePageAndReference(Page page) throws Exception{
     return;
 }
 ```
+不過也不要到處都用例外處理<br>
+否則要從內層throw到外層，萬一更改會需要改很多地方<br>
+另外，如果使用到第三方api，並且這api也會throw error<br>
+那建議用class把api包一層起來，讓外層在call時不用管有哪些error項<br>
+如此一來，萬一api做更改了就不用在實際call api的地方改動(只改LocalPort內層)<br>
+對外層而言還是做一樣的事情<br>
+```C++
+LocalPort port = new LocalPort();
+try{
+  port.open();
+} cache (PortFail e){
+  reportError(e);
+  log(e.getMessage);
+}
+
+class LocalPort{
+  private ApiPort port_instance;
+  
+  LocalPort(){
+    port_instance = new ApiPort();
+  }
+  
+  void open(){
+    try{
+      port_instance.open();
+    } catch (ErrorType1 e){
+      throw new PortFail(e);
+    } catch (ErrorType2 e){
+      throw new PortFail(e);
+    } catch (ErrorType3 e){
+      throw new PortFail(e);
+    }
+  }
+}
+```
+<br>
+另外注意，建議不用回傳/傳遞null，這會讓程式內部到處都是需要做做額外的檢查<br>
+如果真的有需要，回傳一個空的vector之類的都比null好
 <br>
 
 物件與資料結構
