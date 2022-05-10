@@ -170,9 +170,22 @@ output_dir = scratch_dir.get_absolute_path()
 ```
 output_dir = obj.get_absolute_path_of_scratch_dir()
 ```
+<br>
 
+邊界
+====
+邊界指的是自己於他人的程式之間連接的地方<br>
+也是屬於我們unit test接口的地方<br>
+* 建議可以對他人做邊界測試，以確保結果有符合預期<br>
+  邊界測試也可以留著，當別人的code有更新時可以再次確認<br>
+* 建議可以把他人的介面外再包一層class<br>
+  以確保他人api改動時，要做的工不會太多<br>
+  也可以在別人還沒完成時<br>
+  讓class預留接口，讓自己的進度先繼續前進<br>
+<br>
 
-
+單元測試
+========
 
 
 
