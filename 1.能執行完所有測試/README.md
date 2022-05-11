@@ -172,6 +172,23 @@ output_dir = obj.get_absolute_path_of_scratch_dir()
 ```
 <br>
 
+類別
+====
+* 一個class應該要夠簡短，只負責一件事情<br>
+符合單一職責原則(Single Responsibility Principle, SRP)<br>
+```
+單一職責原則: 一個類別或模組應該有一個，而且只能有一個修改的理由
+```
+* 保持凝聚性<br>
+凝聚性越高，代表class裡的function使用到越多的class裡的變數<br>
+保持高凝聚性也可以讓class切割出很多小型的class<br>
+* class之間的相依性用inferface取代<br>
+例如: classA會使用到classB的funct_C<br>
+那先寫一個classB的interface，並在其中先說有funct_C<br>
+之後classB再實作<br>
+如此一來，想要測試classA的時候，可以用classB的interface實作出classB_test<br>
+使得在不改classA的情況下，很好的控制所有classA的input以做測試<br>
+
 邊界
 ====
 邊界指的是自己於他人的程式之間連接的地方<br>
