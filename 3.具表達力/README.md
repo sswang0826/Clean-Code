@@ -129,32 +129,6 @@ log.printTime(now_time)
 意思就是在不同種類的function之間多換幾行
 * class中，function放在一起，veriable放在一起
 
-
-+++++++++++++<br>
-或是利用class及virtual function來取代，如:
-```C++
-class rendor{
-    call_foo_A();
-    call_foo_B();
-    
-    foo(bool isEven){
-        call_foo_A(); // do something first
-        
-        if(isEven){
-            // do something for even        
-        }else{
-            // do something for odd
-        }
-    
-        call_foo_B(); // do something
-    }
-}
-```
-可以改成
-```C++
-
-```
-
 <br>
 <br>
 
