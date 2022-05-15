@@ -87,7 +87,10 @@ rendorForEven()
 額外的return一樣會被吸引精力<br>
 所以當你在一個大的function中想要用return來完成類似goto的功能時<br>
 或許可以思考看看，要不要把function拆出更多的子function<br>
-<br>
+* 沒必要太過簡短<br>
+比起有適當命名，能容易看懂的程式碼<br>
+過於簡短緊密反而需要花費更多的時間閱讀<br>
+這對讀者不友善，甚至可能會錯意<br>
 
 註解
 ====
