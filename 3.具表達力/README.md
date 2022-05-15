@@ -57,6 +57,9 @@ Complex pt = new Complex(2.0);
 結果在高層次就出現GetConnectionByPhoneNumber這種有特別指向性的名稱<br>
 最好還是改成GetConnection，上面的名稱還是留給衍生類別來命名<br>
 以免萬一你需要增加新的connection方式，你就尷尬了<br>
+* 幫助釐清<br>
+如果你遇到模糊不清的模組，建議可以將計算過程多加入一些名稱有意義的變數<br>
+這會有效的提升可讀性，並且在模組切割上也會提供一些想法<br>
 <br>
 
 函式
