@@ -171,6 +171,8 @@ output_dir = scratch_dir.get_absolute_path()
 output_dir = obj.get_absolute_path_of_scratch_dir()
 ```
 <br>
+雖然理論上要完全包裝好的話，不應該在class中直接get別的class的變數拿來用<br>
+但有時候沒辦法，屬於必要之惡<br>
 
 類別
 ====
