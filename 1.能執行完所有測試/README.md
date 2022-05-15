@@ -179,6 +179,8 @@ output_dir = obj.get_absolute_path_of_scratch_dir()
 ```
 單一職責原則: 一個類別或模組應該有一個，而且只能有一個修改的理由
 ```
+而當一個class的成員或function使用到的變數越少，代表他越專注做一件事<br>
+而耦合度就越低<br>
 * 保持凝聚性<br>
 凝聚性越高，代表class裡的function使用到越多的class裡的變數<br>
 保持高凝聚性也可以讓class切割出很多小型的class<br>
@@ -188,6 +190,10 @@ output_dir = obj.get_absolute_path_of_scratch_dir()
 之後classB再實作<br>
 如此一來，想要測試classA的時候，可以用classB的interface實作出classB_test<br>
 使得在不改classA的情況下，很好的控制所有classA的input以做測試<br>
+* 不同層次的概念不要混在一起<br>
+高層次概念應該放在基底類別，接近低層次與實現細節相關的應該放在衍生類別<br>
+不要在基底類別就先寫一些跟實作細節相關的function<br>
+
 
 邊界
 ====
