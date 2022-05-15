@@ -18,6 +18,17 @@
 
 * 避免模糊<br>
     例如 account_data及account_info這種不夠清晰的名字<br>
+    
+* 精準描述<br>
+以下這段程式，命名為createOrReturnObj會更為精準<br>
+```C++
+Obj getObj() throw IOException {
+    if(m_obj == Null){
+        m_obj = new Obj();
+    }
+    return m_obj;
+}
+```
 
 * 避免否定描述<br>
     否定描述容易讓閱讀變困難<br>
@@ -38,6 +49,14 @@ Complex pt = Complex.CreateFromRealNumber(2.0);
 Complex pt = new Complex(2.0);
 ```
    還要好懂<br>
+* 命名會一直改變<br>
+在程式演化的過程中，變數或函式的意義可能會有所改變<br>
+所以要時常重新評估命名是否合理<br>
+* 在對應的抽象層次選擇適當的命名<br>
+有時你在高層次已經先預想好要怎麼實作<br>
+結果在高層次就出現GetConnectionByPhoneNumber這種有特別指向性的名稱<br>
+最好還是改成GetConnection，上面的名稱還是留給衍生類別來命名<br>
+以免萬一你需要增加新的connection方式，你就尷尬了<br>
 <br>
 
 函式
