@@ -16,6 +16,9 @@
     例如 AccountList的型態不是list這種會讓人誤導的名詞<br>
     或是 ControllerForEfficientHandlingOfStrings與ControllerForEfficientStorageOfStrings這種名字之間只有小小的差別<br>
 
+* 避免魔術數字<br>
+    例如86400應該用SECOND_PER_DAY包裝起來<br>
+
 * 避免模糊<br>
     例如 account_data及account_info這種不夠清晰的名字<br>
     
