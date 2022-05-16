@@ -106,6 +106,33 @@ if (shouldBeDelete(timer))
 ```C++
 if (timer.hasExpired() && !timer.isRecurrent())
 ```
+* 隱藏時序耦合 <br>
+(書中是有列出，但我個人是覺得太多餘了)<br>
+如果你的函式遇有時序性，應該讓這件事情顯而易見<br>
+參考一下:<br>
+```C++
+class MoogDiver{
+    Gradient gradient;
+    vector<Spline> splines;
+    void dive(String reason){
+        saturateGradient();
+        reticulateSplines();
+        diveForMoog(reason)
+    }
+}
+```
+以上做法並沒有強制要有時序耦合，所以應該要改為
+```C++
+class MoogDiver{
+    Gradient gradient;
+    vector<Spline> splines;
+    void dive(String reason){
+        Gradient gradient = saturateGradient();
+        vector<Spline> splines = reticulateSplines(gradient);
+        diveForMoog(splines, reason)
+    }
+}
+```
 
 註解
 ====
