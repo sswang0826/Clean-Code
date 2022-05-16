@@ -61,7 +61,7 @@ void deletePageAndReference(Page page) throws Exception{
 LocalPort port = new LocalPort();
 try{
   port.open();
-} cache (PortFail e){
+} catch (PortFail e){
   reportError(e);
   log(e.getMessage);
 }
