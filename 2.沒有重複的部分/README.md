@@ -45,7 +45,7 @@ public:
 
 class rendorOdd : public rendor{
 public:
-    virtual void fooDoSomething(){
+    virtual void fooDoSomething() override {
         fooDoSomethingForOdd(); 
     }
 };
