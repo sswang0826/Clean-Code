@@ -97,6 +97,15 @@ rendorForEven()
 比起有適當命名，能容易看懂的程式碼<br>
 過於簡短緊密反而需要花費更多的時間閱讀<br>
 這對讀者不友善，甚至可能會錯意<br>
+* 封裝條件判斷<br>
+將if裡面封裝成一個function有助於理解意圖，例如:<br>
+```C++
+if (shouldBeDelete(timer))
+```
+會更優於以下<br>
+```C++
+if (timer.hasExpired() && !timer.isRecurrent())
+```
 
 註解
 ====
