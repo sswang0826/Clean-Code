@@ -72,7 +72,7 @@ if(senior_staff.IsPay){
   senior_staff.DiliverPay();
 }
 ```
-這段重複的的藏到employee的class裡面之外<br>
+這段重複的的藏到另一個function裡面之外<br>
 或許也能考慮建一個employee class<br>
 然後建額外的SeniorEmployee及JuniorEmployee的class來繼承employee<br>
 <br>
