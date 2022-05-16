@@ -63,7 +63,7 @@ class bank{
 所以在此書中建議單一職責原則(Single responsibility principle)<br>
 ```
 單一職責原則: 一個function或一個class都應該只有一個職責
-             如此一來他在需要被修改時穎該也只有一個理由
+             如此一來他在需要被修改時應該也只有一個理由
 ```
 另外以上例子除了將
 ```C++
