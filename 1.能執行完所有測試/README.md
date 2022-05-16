@@ -155,6 +155,9 @@ structure導向可以方便增加新的function(如:area())而不用改變原本
 class導向可以方便增加新的物件(如:Rectangle、Circle)而不用改變原本結構<br>
 所以兩者是相對立的，不要讓一個東西同時又是structure導向，又是class導向<br>
 <br>
+以上面case為例，第二種寫法就是使用多型來取代 if/else 或 switch/case<br>
+有時候用上面的寫法比較好，有時候是下面，所以每次在寫的時候都記得思考一下<br>
+<br>
 * 避免火車事故(train wreck)<br>
 火車事故是以下這段程式<br>
 ```
